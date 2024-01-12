@@ -1,0 +1,49 @@
+from typing import *
+
+def dataTypes(data_type: str) -> Optional[int]:
+    # Dictionary mapping data types to their sizes in bytes
+    data_type_sizes = {
+        'Integer': 4,
+        'Long': 8,
+        'Float': 4,
+        'Double': 8,
+        'Character': 1
+    }
+   
+    # Check if the provided data type is in the dictionary
+    if data_type in data_type_sizes:
+        return data_type_sizes[data_type]
+    else:
+        # If the data type is not in the dictionary, return None
+        return 2
+
+def dataSize(data_type: int):
+    # Dictionary mapping data types to their sizes in bytes
+    size_data_type = {
+        4 :'Integer',
+        8 :'Long',
+        4 :'Float',
+        8 :'Double',
+        1 :'Character'
+    }
+   
+    # Check if the provided data type is in the dictionary
+    if data_type in size_data_type:
+        return size_data_type[data_type]
+    else:
+        # If the data type is not in the dictionary, return None
+        return 2
+
+
+ 
+
+# Example usage:
+type_input = input()
+result = dataTypes(type_input)
+
+if result != 2:
+    print(result)
+else:
+    result = dataSize(int(type_input))
+    if result != 2:
+        print(result)

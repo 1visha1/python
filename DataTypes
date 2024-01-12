@@ -1,0 +1,31 @@
+def dataTypes(data_type: str):
+    # Dictionary mapping data types to their sizes in bytes
+    data_type_sizes = {
+        'Integer': 4,
+        'Long': 8,
+        'Float': 4,
+        'Double': 8,
+        'Character': 1
+    }
+
+    # Check if the provided data type is in the dictionary
+    if data_type in data_type_sizes:
+        return data_type_sizes[data_type]
+
+    # Check if the provided size is in the dictionary
+    if data_type.isdigit():
+        size = int(data_type)
+        for key, value in data_type_sizes.items():
+            if value == size:
+                return str(key)
+    else:
+        return None
+
+    
+    
+
+# Example usage:
+type_input = input()
+result = dataTypes(type_input)
+
+print(type(result))
