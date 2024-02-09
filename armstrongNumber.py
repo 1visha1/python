@@ -1,5 +1,4 @@
 n = int(input())
-
 a = n
 i=0
 while a != 0:
@@ -11,8 +10,9 @@ while a != 0:
     b = int(a%10)
     sum+= b ** i
     a=int(a/10)
-print(sum)
 if n==sum:
     print("true")
 else:
     print("false")
+
+# this is armstring number
